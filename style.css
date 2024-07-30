@@ -1,0 +1,151 @@
+/* Reset básico para remover margens e padding padrão */
+body, h2, table, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .caixa {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Para garantir que o conteúdo fique acima da imagem de fundo */
+  }
+  
+  /* Adiciona a imagem de fundo */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('HARLEY.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Faz a imagem de fundo aparecer atrás do conteúdo */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 0 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #003d7a;
+  }
+  
+  .btn1 {
+    background-color: #28a745; /* Verde para "Gerar" */
+  }
+  
+  .btn1:hover {
+    background-color: #218838;
+  }
+  
+  .btn1:active {
+    background-color: #1e7e34;
+  }
+  
+  .btn2 {
+    background-color: #ffc107; /* Amarelo para "Copiar" */
+    color: #333;
+  }
+  
+  .btn2:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn2:active {
+    background-color: #c69500;
+  }
+  
+  /* Media Query para dispositivos com largura máxima de 600px */
+  @media (max-width: 600px) {
+    .caixa {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    input[type="text"] {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    td {
+      padding: 5px 0;
+    }
+  }
+  
+  /* Media Query para dispositivos com largura máxima de 400px */
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 18px;
+    }
+  
+    input[type="text"] {
+      font-size: 12px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  
